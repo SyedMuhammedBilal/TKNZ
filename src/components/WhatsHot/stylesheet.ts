@@ -7,7 +7,7 @@ export default makeStyles({
     backgroundPosition: 'center', 
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
-    height: '100vh',
+    height: 'auto',
     marginTop: '100px'
   },
   whatsHotTypographyContainer: {
@@ -37,7 +37,7 @@ export default makeStyles({
   },
   singlePackTokenz: {
     width: '280px',
-    height: '415px',
+    height: 'auto',
     borderRadius: '3px',
     backgroundColor: '#161616',
     border: '1px solid rgba(54, 54, 54, 1)',
@@ -78,6 +78,7 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingBottom: '10px'
   },
   packsRarity: {
     display: 'flex'
@@ -96,5 +97,39 @@ export default makeStyles({
     fontSize: '14px',
     fontWeight: 400,
     color: '#d3d3d3'
+  },
+  seeMoreTokenz: {
+    width: '280px',
+    height: '450px',
+    borderRadius: '3px',
+    backgroundColor: '#363636',
+    border: '1px solid rgba(54, 54, 54, 1)',
+    display: 'flex',
+    flexDirection: 'column',
+    cursor: 'pointer',
+  },
+  seeMoreImage: {
+    width: 'auto'
+  },
+  seeMoreContent: {
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    paddingTop: '5.5rem'
+  },
+  seeMorePrices: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: '20px',
+    cursor: 'pointer'
+  },
+  seeMoreTypo: {
+    fontWeight: 300
+  },
+  seeMorePacks: {
+    marginTop: '60px'
+  },
+  seeMorePacksImage: {
+    padding: '13px'
   }
 })
