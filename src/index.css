@@ -4,6 +4,32 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Accent';
+    src: local('Accent'),
+            url('./fonts/aquire-font/Aquire-BW0ox.otf'),
+            url('./fonts/aquire-font/AquireBold-8Ma60.otf'),
+            url('./fonts/aquire-font/AquireLight-YzE0o.otf');
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    src: local('FiraSans'),
+            url('./fonts/fira-sans/FiraSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'FiraSansMedium';
+    src: local('FiraSansMedium'),
+            url('./fonts/fira-sans/FiraSans-Medium.otf');
+}
+
+@font-face {
+    font-family: 'FiraSansBody';
+    src: local('FiraSansMedium'),
+            url('./fonts/fira-sans/FiraSans-Book.otf');
+}
+
 body {
     background-color: #161616;
 }
@@ -15,4 +41,5 @@ h1, h2, h3, h4, h5, h6, p, span {
 .mainBody {
     padding-left: 6.5rem;
     padding-right: 6.5rem;
+    padding-top: 10rem;
 }

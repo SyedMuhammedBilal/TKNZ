@@ -12,7 +12,7 @@ const BackCatalog = () => {
             </Box>
 
             <Box>
-                <Typography> BACK TO CATALOG </Typography>
+                <Typography style={{fontFamily: 'Accent'}}> BACK TO CATALOG </Typography>
             </Box>
         </Box>
     );

@@ -33,19 +33,22 @@ export default makeStyles({
     fontSize: '40px',
     lineHeight: '40px',
     color: '#FBA428',
-    paddingBottom: '25px'
+    paddingBottom: '25px',
+    fontFamily: 'Accent'
   },
   cardNumber: {
     fontSize: '17px',
     lineHeight: '23.8px',
     fontWeight: 400,
     paddingBottom: '40px',
+    fontFamily: 'FiraSansBody'
   },
   pricing: {
     fontSize: '26px',
     fontWeight: 400,
     lineHeight: '22.7px',
     paddingBottom: '40px',
+    fontFamily: 'Accent'
   },
   counterContainer: {
     display: 'flex',
@@ -78,26 +81,30 @@ export default makeStyles({
     fontWeight: 900,
     fontSize: '17px',
     letterSpacing: '3%',
-    lineHeight: '18px'
+    lineHeight: '18px',
+    fontFamily: 'FiraSansMedium'
   },
   totalAmount: {
     fontSize: '14px',
     fontWeight: 200,
     color: '#D3D3D3',
-    paddingBottom: '40px'
+    paddingBottom: '40px',
+    fontFamily: 'FiraSansBody'
   },
   packDetailsTypo: {
     fontSize: '16px',
     fontWeight: 400,
     letterSpacing: '1%',
     lineHeight: '13.97px',
-    paddingBottom: '25px'
+    paddingBottom: '25px',
+    fontFamily: 'Accent'
   },
   descriptionTypo1: {
     fontSize: '14px',
     fontWeight: 200,
     lineHeight: '19.6px',
     color: '#D3D3D3',
-    paddingBottom: '25px'
+    paddingBottom: '25px',
+    fontFamily: 'FiraSansBody'
   }
 })

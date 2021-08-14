@@ -20,12 +20,14 @@ export default makeStyles({
   },
   whatsHotTypo1: {
     fontSize: '75px',
-    fontWeight: 700
+    fontWeight: 700,
+    fontFamily: 'Accent'
   },
   whatsHotTypo2: {
     fontSize: '25px',
     width: '683px',
-    fontWeight: 300
+    fontWeight: 300,
+    fontFamily: 'FiraSansBody'
   },
   whatsHotCardsContainer: {
     paddingLeft: '6.5rem',
@@ -55,20 +57,24 @@ export default makeStyles({
   singlePackMainHeading: {
     fontWeight: 900,
     fontSize: '17px',
-    lineHeight: '23.8px'
+    lineHeight: '23.8px',
+    fontFamily: 'FiraSansMedium',
+    paddingBottom: '5px'
   },
   singlePackDescription: {
     fontSize: '14px',
     fontWeight: 400,
     lineHeight: '19.6px',
-    color: '#D3D3D3'
+    color: '#D3D3D3',
+    fontFamily: 'FiraSansBody'
   },
   singlePackPrices: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: '20px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontFamily: 'FiraSansBody'
   },
   packsPricingTypo: {
     fontWeight: 300
@@ -87,16 +93,19 @@ export default makeStyles({
     fontSize: '14px',
     color: '#d3d3d3',
     fontWeight: 400,
-    paddingRight: '5px'
+    paddingRight: '5px',
+    fontFamily: 'FiraSansMedium'
   },
   PacksListingTypo: {
     fontSize: '14px',
     fontWeight: 400,
+    fontFamily: 'FiraSansBody'
   },
   PacksListingNumbersTypo: {
     fontSize: '14px',
     fontWeight: 400,
-    color: '#d3d3d3'
+    color: '#d3d3d3',
+    fontFamily: 'FiraSansBody'
   },
   seeMoreTokenz: {
     width: '280px',

@@ -6,7 +6,11 @@ export default makeStyles({
     height: '95px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    position: 'fixed',
+    top: 0,
+    width: '100%',
+    zIndex: 1,
   },
   navbarWrapper: {
     display: 'flex',
@@ -25,8 +29,12 @@ export default makeStyles({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  navbarTypo: {
+    fontFamily: 'Accent'
+  },
   navbarIconsTypo: {
-    paddingLeft: '10px'
+    paddingLeft: '10px',
+    fontFamily: 'Accent'
   },
   eSportsTitle: {
     height: '70px',
@@ -35,6 +43,10 @@ export default makeStyles({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     paddingRight: '4rem',
-    paddingLeft: '4rem'
+    paddingLeft: '4rem',
+    position: 'fixed',
+    width: '100%',
+    top: '98px',
+    zIndex: 1
   },
 });
