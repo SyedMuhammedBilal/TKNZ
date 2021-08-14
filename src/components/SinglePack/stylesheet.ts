@@ -7,14 +7,21 @@ export default makeStyles({
     justifyContent: 'space-between',
     marginTop: '45px'
   },
-  mainPackBox: {
+  mainPackBox1: {
+    width: '600px',
+    height: '711px',
+    borderRadius: '3px',
+    background: 'transparent',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  },
+  mainPackBox2: {
     width: '600px',
     height: '711px',
     borderRadius: '3px',
     background: 'rgba(54, 54, 54, 0.4)',
-    '&:nth-child(1)': {
-      background: 'transparent'
-    }
   },
   contentBox: {
     paddingLeft: '40px',

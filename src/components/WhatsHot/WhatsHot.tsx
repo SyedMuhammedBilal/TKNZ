@@ -9,6 +9,8 @@ const WhatsHot = () => {
   const classes = useStyles();
 
   const [data, setData] = useState<any>();
+  const [cartCounter, setCartCounter] = useState<number>(0);
+  const [maxCartCounter, setMaxCartCounter] = useState<number>(0);
 
   const indexService = useMemo(() => new IndexService(), []);
 
