@@ -6,6 +6,7 @@ import { Box } from '@material-ui/core';
 
 import './index.css'
 import WhatsHot from 'components/WhatsHot/WhatsHot';
+import SinglePack from 'components/SinglePack/SinglePack';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Box className="mainBody">
         <BackCatalog />
+        <SinglePack />
       </Box>
       <WhatsHot />
     </>
