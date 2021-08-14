@@ -8,11 +8,11 @@ const BackCatalog = () => {
   return (
         <Box className={classes.backCatalog}>
             <Box>
-                <ArrowBackIosIcon style={{fill: '#fff'}} />
+                <ArrowBackIosIcon style={{fill: '#fff', fontSize: '14px'}}  />
             </Box>
 
             <Box>
-                <Typography style={{fontFamily: 'Accent'}}> BACK TO CATALOG </Typography>
+                <Typography style={{fontFamily: 'Accent', fontSize: '14px', paddingLeft: '5px'}}> BACK TO CATALOG </Typography>
             </Box>
         </Box>
     );

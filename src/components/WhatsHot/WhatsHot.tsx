@@ -34,7 +34,7 @@ const WhatsHot = () => {
   return (
     <Box className={classes.whatsHotContainer}>
       <Box className={classes.whatsHotTypographyContainer}>
-        <Typography className={classes.whatsHotTypo1}> MAX OUT! </Typography>
+        <Typography className={classes.whatsHotTypo1}> what's hot! </Typography>
 
         <Typography className={classes.whatsHotTypo2}>
           Check out these packs from the same set and prep your collection for

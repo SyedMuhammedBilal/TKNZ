@@ -7,7 +7,7 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
-    position: 'fixed',
+    // position: 'fixed',
     top: 0,
     width: '100%',
     zIndex: 1,
@@ -44,7 +44,7 @@ export default makeStyles({
     justifyContent: 'space-evenly',
     paddingRight: '4rem',
     paddingLeft: '4rem',
-    position: 'fixed',
+    // position: 'fixed',
     width: '100%',
     top: '98px',
     zIndex: 1

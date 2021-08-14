@@ -5,7 +5,8 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: '45px'
+    marginTop: '45px',
+    flexWrap: 'wrap',
   },
   mainPackBox1: {
     width: '600px',
@@ -15,13 +16,26 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap', 
+    ['@media (max-width: 1379px)']: {
+      width: 'auto',
+      justifyContent: 'space-around'
+    }
   },
   mainPackBox2: {
     width: '600px',
     height: '711px',
     borderRadius: '3px',
     background: 'rgba(54, 54, 54, 0.4)',
+    ['@media (max-width: 1410px)']: {
+      width: '500px'
+    },
+    ['@media (max-width: 1379px)']: {
+      width: 'max-content'
+    }
+  },
+  singlePackImage: {
+    display: 'inherit',
   },
   contentBox: {
     paddingLeft: '40px',

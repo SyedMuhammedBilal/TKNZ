@@ -9,7 +9,6 @@ const SinglePack = () => {
 
   const [data, setData] = useState<any>([]);
   const [cartCounter, setCartCounter] = useState<number>(0);
-  const [maxCartCounter, setMaxCartCounter] = useState<number>(0);
 
   const indexService = useMemo(() => new IndexService(), []);
 
@@ -52,7 +51,7 @@ const SinglePack = () => {
             <Box className={classes.mainPackBox1}>
               {item?.assets.map((img) => {
                 return (
-                  <Box>
+                  <Box className={classes.singlePackImage}>
                     <img src={img} alt="image" />
                   </Box>
                 );
