@@ -22,13 +22,27 @@ export default makeStyles({
   whatsHotTypo1: {
     fontSize: '75px',
     fontWeight: 700,
-    fontFamily: 'Accent'
+    fontFamily: 'Accent',
+    '@media (max-width: 810px)': {
+      fontSize: '60px'
+    },
+    '@media (max-width: 645px)': {
+      fontSize: '42px'
+    },
   },
   whatsHotTypo2: {
     fontSize: '25px',
     width: '683px',
     fontWeight: 300,
-    fontFamily: 'FiraSansBody'
+    fontFamily: 'FiraSansBody',
+    '@media (max-width: 810px)': {
+      fontSize: '20px',
+      width: '500px'
+    },
+    '@media (max-width: 645px)': {
+      fontSize: '16px',
+      width: '370px'
+    }
   },
   whatsHotCardsContainer: {
     paddingLeft: '6.5rem',
@@ -38,7 +52,7 @@ export default makeStyles({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    ['@media (max-width: 767px)']: {
+    '@media (max-width: 767px)': {
       justifyContent: 'center',
     }
   },
@@ -51,7 +65,7 @@ export default makeStyles({
     display: 'flex',
     flexDirection: 'column',
     cursor: 'pointer',
-    ['@media (max-width: 767px)']: {
+    '@media (max-width: 767px)': {
       width: 'max-content',
       marginBottom: '2rem'
     }
@@ -125,7 +139,7 @@ export default makeStyles({
     display: 'flex',
     flexDirection: 'column',
     cursor: 'pointer',
-    ['@media (max-width: 767px)']: {
+    '@media (max-width: 767px)': {
       width: '-webkit-fill-available',
       marginBottom: '2rem'
     },

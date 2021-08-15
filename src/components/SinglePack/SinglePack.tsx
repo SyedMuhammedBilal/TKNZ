@@ -3,12 +3,16 @@ import { Box, Typography, Divider } from "@material-ui/core";
 import useStyles from "./stylesheet";
 import Button from "@material-ui/core/Button";
 import { IndexService } from "services/index.service";
+import { LazyImageProvider } from "components/LazyImage/LazyImageContext";
+import Carousel from "../Carousel/Carousel";
+import LazyImage from "components/LazyImage/LazyImage";
 
 const SinglePack = () => {
   const classes = useStyles();
 
   const [data, setData] = useState<any>([]);
   const [cartCounter, setCartCounter] = useState<number>(0);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1096);
 
   const indexService = useMemo(() => new IndexService(), []);
 
@@ -30,12 +34,21 @@ const SinglePack = () => {
   console.log(data);
 
   const counterIncrementButton = () => {
-    setCartCounter(cartCounter + 1)
-  }
-  
+    setCartCounter(cartCounter + 1);
+  };
+
   const counterDecrementButton = () => {
-    setCartCounter(cartCounter - 1)
-  }
+    setCartCounter(cartCounter - 1);
+  };
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1096);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   const buyButton = {
     background: "#373FC5",
@@ -48,15 +61,28 @@ const SinglePack = () => {
       {data.map((item) => {
         return (
           <>
-            <Box className={classes.mainPackBox1}>
-              {item?.assets.map((img) => {
-                return (
-                  <Box className={classes.singlePackImage}>
-                    <img src={img} alt="image" />
-                  </Box>
-                );
-              })}
-            </Box>
+            {isDesktop ? (
+              <Box className={classes.mainPackBox1}>
+                {item?.assets.map((img) => {
+                  return (
+                    <Box className={classes.singlePackImage}>
+                      <img src={img} alt="image" />
+                    </Box>
+                  );
+                })}
+              </Box>
+            ) : (
+              <LazyImageProvider>
+                <Carousel>
+                  {item?.assets.map((img, index) => {
+                    return (
+                      <LazyImage aspectRatio={[10, 7]} src={img} key={index} />
+                    );
+                  })}
+                </Carousel>
+              </LazyImageProvider>
+            )}
+
             <Box className={classes.mainPackBox2}>
               <Box className={classes.contentBox}>
                 <Typography className={classes.mainHeading}>
@@ -72,11 +98,21 @@ const SinglePack = () => {
                 <Box className={classes.counterContainer}>
                   <Box className={classes.counterBox}>
                     <Box className={classes.counterButtons}>
-                      <Box className={classes.incrementButton} onClick={counterDecrementButton}>-</Box>
+                      <Box
+                        className={classes.incrementButton}
+                        onClick={counterDecrementButton}
+                      >
+                        -
+                      </Box>
                       <Box>
                         <Typography>{cartCounter}</Typography>
                       </Box>
-                      <Box className={classes.decrementButton} onClick={counterIncrementButton}>+</Box>
+                      <Box
+                        className={classes.decrementButton}
+                        onClick={counterIncrementButton}
+                      >
+                        +
+                      </Box>
                     </Box>
                   </Box>
                   <Box>
