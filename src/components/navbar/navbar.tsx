@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Box, Typography } from "@material-ui/core";
 import useStyles from "./stylesheet";
 import Logo from "../../assets/Vector.png";
@@ -7,14 +7,13 @@ import AccountIcon from "../../assets/profileIcon.png";
 import NotificationIcon from "../../assets/notificationsIcon.png";
 import BurgerIcon from "../../assets/Burger.png";
 import Hamburger from "./hamburger";
-import Aos from "aos"
-import "aos/dist/aos.css"
-import {HamburgerData} from '../../App'
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { HamburgerData } from "../../App";
 
 export default function Navbar() {
   const classes = useStyles();
-  // const [hamburger, setHamburger] = useState<boolean>(true);
-  const {hamburger,setHamburger} = React.useContext(HamburgerData)
+  const { hamburger, setHamburger } = React.useContext(HamburgerData);
 
   const HandleClick = (e: any) => {
     e.preventDefault();
@@ -26,14 +25,18 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    Aos.init({ duration: 1000 })
-  }, [])
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <>
       {hamburger ? (
-        <div data-aos="fade-left" data-aos-duration="1000" className="hamburger"  >
-        <Hamburger cancelState={cancelState} />
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="hamburger"
+        >
+          <Hamburger cancelState={cancelState} />
         </div>
       ) : (
         <Box className={classes.navbarContainer}>

@@ -12,7 +12,7 @@ const LazyImage = ({ src, aspectRatio, lazyLoad }) => {
 
   return (
     <Box className="lazyImage" style={{ paddingTop }}>
-      <img className="lazyImage__img" data-src={src} alt="image" />
+      <img className="lazyImage__img" data-src={src} alt="pic" />
     </Box>
   )
 };

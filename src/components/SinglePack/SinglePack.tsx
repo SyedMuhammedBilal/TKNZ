@@ -24,6 +24,7 @@ const SinglePack = () => {
         setData([getPacksData]);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [IndexService]
   );
 
@@ -66,7 +67,7 @@ const SinglePack = () => {
                 {item?.assets.map((img) => {
                   return (
                     <Box className={classes.singlePackImage}>
-                      <img src={img} alt="image" />
+                      <img src={img} alt="pic" />
                     </Box>
                   );
                 })}

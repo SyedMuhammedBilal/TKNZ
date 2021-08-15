@@ -20,6 +20,7 @@ const WhatsHot = () => {
         setData(getPacksData);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [IndexService]
   );
 
@@ -48,7 +49,7 @@ const WhatsHot = () => {
                   <img
                     className={classes.singlePackImage}
                     src={items?.asset}
-                    alt="pack image"
+                    alt="pack"
                   />
                 </Box>
 
@@ -87,27 +88,23 @@ const WhatsHot = () => {
           );
         })}
         <Box className={classes.seeMoreTokenz}>
-            <Box className={classes.seeMorePacks}>
-              <Box className={classes.seeMorePacksImage}>
-                <img
-                  className={classes.seeMoreImage}
-                  src={SeeMore}
-                  alt="pack image"
+          <Box className={classes.seeMorePacks}>
+            <Box className={classes.seeMorePacksImage}>
+              <img className={classes.seeMoreImage} src={SeeMore} alt="pack" />
+            </Box>
+
+            <Box className={classes.seeMoreContent}>
+              <Box className={classes.seeMorePrices}>
+                <Typography className={classes.packsPricingTypo}>
+                  GO TO MARKET PLACE
+                </Typography>
+                <ArrowForwardIosIcon
+                  style={{ fill: "#fff", fontSize: "16px" }}
                 />
               </Box>
-
-              <Box className={classes.seeMoreContent}>
-                <Box className={classes.seeMorePrices}>
-                  <Typography className={classes.packsPricingTypo}>
-                    GO TO MARKET PLACE
-                  </Typography>
-                  <ArrowForwardIosIcon
-                    style={{ fill: "#fff", fontSize: "16px" }}
-                  />
-                </Box>
             </Box>
-              </Box>
-            </Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

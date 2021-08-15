@@ -13,7 +13,7 @@ const EmblaCarouselComponent = ({ children }) => {
 
   const scrollPrev = useCallback(() => carousel.scrollPrev(), [carousel]);
   const scrollNext = useCallback(() => carousel.scrollNext(), [carousel]);
-  const scrollTo = useCallback(index => carousel.scrollTo(index), [carousel]);
+  const scrollTo = useCallback((index) => carousel.scrollTo(index), [carousel]);
 
   useEffect(() => {
     const onSelect = () => {
@@ -59,7 +59,7 @@ const EmblaCarouselComponent = ({ children }) => {
         ))}
       </Box>
     </Box>
-  )
+  );
 };
 
 export default EmblaCarouselComponent;

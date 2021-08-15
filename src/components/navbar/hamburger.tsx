@@ -7,10 +7,9 @@ import SearchIcon from "../../assets/search.png";
 import AccountIcon from "../../assets/profileIcon.png";
 import NotificationIcon from "../../assets/notificationsIcon.png";
 
-
 function Hamburger({ cancelState }) {
   const classes = useStyles();
-  
+
   return (
     <Box className={classes.hamburgerContainer}>
       <Box className={classes.hamburgerTop}>
