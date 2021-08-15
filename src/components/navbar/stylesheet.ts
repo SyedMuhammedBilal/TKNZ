@@ -27,14 +27,23 @@ export default makeStyles({
   navbarIcons: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '@media (max-width:1200px)':{
+      display:'none'
+    }
   },
   navbarTypo: {
-    fontFamily: 'Accent'
+    fontFamily: 'Accent',
+    '@media (max-width:1200px)':{
+      display:'none'
+    }
   },
   navbarIconsTypo: {
     paddingLeft: '10px',
-    fontFamily: 'Accent'
+    fontFamily: 'Accent',
+    '@media (max-width:1200px)':{
+      display:'none'
+    }
   },
   eSportsTitle: {
     height: '70px',
@@ -47,6 +56,50 @@ export default makeStyles({
     // position: 'fixed',
     width: '100%',
     top: '98px',
-    zIndex: 1
+    zIndex: 1,
+    '@media (max-width:1200px)':{
+      display:'none'
+    }
   },
+  burgerIcon:{
+    display:'none',
+    '@media (max-width:1200px)':{
+      display : "inline"
+    }
+    
+  },
+  // hamburger
+  hamburgerContainer:{
+    width:"100%",
+    height:'100vh',
+    background: '#161616',
+  },
+  hamburgerTop:{
+    display: 'flex',
+    flexDirection: "row",
+    alignItems: 'baseline',
+    justifyContent: 'space-between',
+    width: '98%',
+    marginTop: '20px'
+  },
+  hamTypo:{
+    fontFamily: 'Accent',
+    fontSize:"18px",
+    padding:'3px'
+    
+  },
+  menu:{
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 'auto',
+    width: '50%',
+    marginTop: '150px',
+    textAlign:"center"
+},
+hamIcon:{
+  display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}
+  
 });
