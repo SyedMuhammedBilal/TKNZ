@@ -17,7 +17,7 @@ export default makeStyles({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: 'wrap', 
-    ['@media (max-width: 1379px)']: {
+    '@media (max-width: 1379px)': {
       width: 'auto',
       justifyContent: 'space-around'
     }
@@ -27,10 +27,10 @@ export default makeStyles({
     height: '711px',
     borderRadius: '3px',
     background: 'rgba(54, 54, 54, 0.4)',
-    ['@media (max-width: 1410px)']: {
+    '@media (max-width: 1410px)': {
       width: '500px'
     },
-    ['@media (max-width: 1379px)']: {
+    '@media (max-width: 1379px)': {
       width: 'max-content'
     }
   },
@@ -41,7 +41,11 @@ export default makeStyles({
     paddingLeft: '40px',
     paddingRight: '40px',
     paddingTop: '40px',
-    paddingBottom: '40px'
+    paddingBottom: '40px',
+    '@media (max-width: 500px)': {
+     
+      padding:"14px"
+    }
   },
   mainHeading: {
     fontSize: '40px',

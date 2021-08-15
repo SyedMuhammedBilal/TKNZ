@@ -17,7 +17,11 @@ export default makeStyles({
     justifyContent: 'flex-start',
     paddingLeft: '6.5rem',
     paddingRight: '6.5rem',
-    paddingTop: '45px'
+    paddingTop: '45px',
+    '@media (max-width: 350px)': {
+    paddinLeft:'1.5rem !important' 
+    },
+
   },
   whatsHotTypo1: {
     fontSize: '75px',
@@ -42,6 +46,10 @@ export default makeStyles({
     '@media (max-width: 645px)': {
       fontSize: '16px',
       width: '370px'
+    },
+    '@media (max-width: 500px)': {
+      fontSize: '12px',
+      width: '220px'
     }
   },
   whatsHotCardsContainer: {
@@ -140,7 +148,7 @@ export default makeStyles({
     flexDirection: 'column',
     cursor: 'pointer',
     '@media (max-width: 767px)': {
-      width: '-webkit-fill-available',
+      // width: '-webkit-fill-available',
       marginBottom: '2rem'
     },
     '&:hover': {

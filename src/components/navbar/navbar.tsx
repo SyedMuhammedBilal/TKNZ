@@ -9,18 +9,20 @@ import BurgerIcon from "../../assets/Burger.png";
 import Hamburger from "./hamburger";
 import Aos from "aos"
 import "aos/dist/aos.css"
+import {HamburgerData} from '../../App'
 
 export default function Navbar() {
   const classes = useStyles();
-  const [hamburger, setHamburger] = useState<boolean>(true);
+  // const [hamburger, setHamburger] = useState<boolean>(true);
+  const {hamburger,setHamburger} = React.useContext(HamburgerData)
 
   const HandleClick = (e: any) => {
     e.preventDefault();
-    setHamburger(false);
+    setHamburger(true);
   };
 
   const cancelState = () => {
-    setHamburger(true);
+    setHamburger(false);
   };
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function Navbar() {
 
   return (
     <>
-      {!hamburger ? (
+      {hamburger ? (
         <div data-aos="fade-left" data-aos-duration="1000" className="hamburger"  >
         <Hamburger cancelState={cancelState} />
         </div>
