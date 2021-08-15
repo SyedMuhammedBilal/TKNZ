@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import useStyles from './stylesheet';
 import Image1 from '../../assets/eSportsTitle/image-1.png'
 import Image2 from '../../assets/eSportsTitle/image-2.png'

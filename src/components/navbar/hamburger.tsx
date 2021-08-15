@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box, Typography } from "@material-ui/core";
 import CancelIcon from "@material-ui/icons/Cancel";
 import useStyles from "./stylesheet";

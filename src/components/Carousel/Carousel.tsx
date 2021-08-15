@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import EmblaCarouselReact from "embla-carousel-react";
 import { PrevBtn, NextBtn, DotBtn } from "./CarouselButtons";
+import { Box } from "@material-ui/core";
 import "./carousel.css";
 
 const EmblaCarouselComponent = ({ children }) => {
@@ -29,26 +30,26 @@ const EmblaCarouselComponent = ({ children }) => {
   }, [carousel]);
 
   return (
-    <div className="carousel">
-      <div className="carousel__wrap">
+    <Box className="carousel">
+      <Box className="carousel__wrap">
         <EmblaCarouselReact
           className="carousel__viewport"
           emblaRef={initCarousel}
           options={{ loop: false }}
           htmlTagName="div"
         >
-          <div className="carousel__container">
+          <Box className="carousel__container">
             {children.map((Child, index) => (
-              <div className="carousel__item" key={index}>
+              <Box className="carousel__item" key={index}>
                 {Child}
-              </div>
+              </Box>
             ))}
-          </div>
+          </Box>
         </EmblaCarouselReact>
         <PrevBtn onClick={scrollPrev} enabled={prevBtnEnabled} />
         <NextBtn onClick={scrollNext} enabled={nextBtnEnabled} />
-      </div>
-      <div className="carousel__dots">
+      </Box>
+      <Box className="carousel__dots">
         {scrollSnaps.map((snap, index) => (
           <DotBtn
             selected={index === selectedIndex}
@@ -56,8 +57,8 @@ const EmblaCarouselComponent = ({ children }) => {
             key={index}
           />
         ))}
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 };
 

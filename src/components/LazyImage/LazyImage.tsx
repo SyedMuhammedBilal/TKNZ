@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { withLazyImageContext } from "./LazyImageContext";
+import { Box } from "@material-ui/core";
 import "./lazyImage.css";
 
 const LazyImage = ({ src, aspectRatio, lazyLoad }) => {
@@ -10,9 +11,9 @@ const LazyImage = ({ src, aspectRatio, lazyLoad }) => {
   }, [src, aspectRatio, lazyLoad]);
 
   return (
-    <div className="lazyImage" style={{ paddingTop }}>
-      <img className="lazyImage__img" data-src={src} />
-    </div>
+    <Box className="lazyImage" style={{ paddingTop }}>
+      <img className="lazyImage__img" data-src={src} alt="image" />
+    </Box>
   )
 };
 
