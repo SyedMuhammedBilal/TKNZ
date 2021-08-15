@@ -88,19 +88,21 @@ const WhatsHot = () => {
           );
         })}
         <Box className={classes.seeMoreTokenz}>
-          <Box className={classes.seeMorePacks}>
-            <Box className={classes.seeMorePacksImage}>
-              <img className={classes.seeMoreImage} src={SeeMore} alt="pack" />
-            </Box>
-
-            <Box className={classes.seeMoreContent}>
-              <Box className={classes.seeMorePrices}>
-                <Typography className={classes.packsPricingTypo}>
-                  GO TO MARKET PLACE
-                </Typography>
-                <ArrowForwardIosIcon
-                  style={{ fill: "#fff", fontSize: "16px" }}
-                />
+          <Box className={classes.seeMoreTokenInner}>
+            <Box className={classes.seeMorePacks}>
+              <Box className={classes.seeMorePacksImage}>
+                <img className={classes.seeMoreImage} src={SeeMore} alt="pack" />
+              </Box>
+        
+              <Box className={classes.seeMoreContent}>
+                <Box className={classes.seeMorePrices}>
+                  <Typography className={classes.packsPricingTypo}>
+                    GO TO MARKET PLACE
+                  </Typography>
+                  <ArrowForwardIosIcon
+                    style={{ fill: "#fff", fontSize: "16px" }}
+                  />
+                </Box>
               </Box>
             </Box>
           </Box>

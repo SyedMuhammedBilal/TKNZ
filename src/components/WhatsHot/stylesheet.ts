@@ -56,10 +56,11 @@ export default makeStyles({
   whatsHotCardsContainer: {
     paddingLeft: '6.5rem',
     paddingRight: '6.5rem',
-    marginTop: '25px',
+    marginTop: '4rem',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: '9.5rem',
     flexWrap: 'wrap',
     '@media (max-width: 767px)': {
       justifyContent: 'center',
@@ -143,22 +144,39 @@ export default makeStyles({
     width: '280px',
     height: '450px',
     borderRadius: '3px',
-    backgroundColor: '#363636',
     border: '1px solid rgba(54, 54, 54, 1)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
-    transition: 'all 2s ease',
+    position: 'relative',
+    zIndex: 0,
+    overflow: 'hidden',
+    transition: 'all 1.7s 0s ease',
+    '&:hover': {
+      overflow: 'visible',
+      zIndex: 100,
+    },
     '@media (max-width: 767px)': {
       // width: '-webkit-fill-available',
-      marginBottom: '2rem'
-    },
+      marginBottom: '2rem',
+    }
+  },
+  seeMoreTokenInner: {
+    position: 'absolute',
+    backgroundColor: '#363636',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'all 1.7s 0s ease',
+    height: '450px',
+    width: '280px',
     '&:hover': {
+      zIndex: 100,
+      height: '650px',
       backgroundColor: '#161616',
-      transition: '1s ease-in-out',
-      height: '650px'
     }
   },
   seeMoreImage: {
