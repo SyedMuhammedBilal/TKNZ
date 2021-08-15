@@ -125,4 +125,4 @@ export default makeStyles({
     paddingBottom: '25px',
     fontFamily: 'FiraSansBody'
   }
-})
+});
