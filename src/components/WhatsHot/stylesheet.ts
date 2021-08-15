@@ -156,12 +156,12 @@ export default makeStyles({
     transition: 'all 1.7s 0s ease',
     '&:hover': {
       overflow: 'visible',
-      zIndex: 100,
     },
     '@media (max-width: 767px)': {
       // width: '-webkit-fill-available',
       marginBottom: '2rem',
-    }
+    },
+
   },
   seeMoreTokenInner: {
     position: 'absolute',
@@ -177,6 +177,7 @@ export default makeStyles({
       zIndex: 100,
       height: '650px',
       backgroundColor: '#161616',
+      
     }
   },
   seeMoreImage: {
