@@ -48,7 +48,7 @@ const SinglePack = () => {
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
-  });
+  }, []);
 
   const buyButton = {
     background: "#373FC5",

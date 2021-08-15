@@ -16,7 +16,7 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    flex: 0.4,
+    flex: 0.45,
     // paddingLeft: '10rem',
     // paddingRight: '10rem'
   },
@@ -62,9 +62,10 @@ export default makeStyles({
     }
   },
   burgerIcon:{
-    display:'none',
+    // display:'none',
+    cursor: 'pointer',
     '@media (max-width:1200px)':{
-      display : "inline"
+      marginLeft: '250px'
     }
     
   },

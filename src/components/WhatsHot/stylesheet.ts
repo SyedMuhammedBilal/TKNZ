@@ -145,7 +145,7 @@ export default makeStyles({
     },
     '&:hover': {
       backgroundColor: '#610C8D',
-      transition: '1s linear'
+      transition: '1s ease-in-out'
     }
   },
   seeMoreImage: {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography } from "@material-ui/core";
 import CancelIcon from "@material-ui/icons/Cancel";
 import useStyles from "./stylesheet";
@@ -7,8 +7,10 @@ import SearchIcon from "../../assets/search.png";
 import AccountIcon from "../../assets/profileIcon.png";
 import NotificationIcon from "../../assets/notificationsIcon.png";
 
+
 function Hamburger({ cancelState }) {
   const classes = useStyles();
+  
   return (
     <Box className={classes.hamburgerContainer}>
       <Box className={classes.hamburgerTop}>
