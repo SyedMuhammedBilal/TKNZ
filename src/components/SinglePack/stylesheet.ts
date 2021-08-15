@@ -35,7 +35,7 @@ export default makeStyles({
     }
   },
   singlePackImage: {
-    display: 'inherit',
+    cursor: 'pointer'
   },
   contentBox: {
     paddingLeft: '40px',

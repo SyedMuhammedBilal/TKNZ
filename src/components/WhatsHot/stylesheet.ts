@@ -128,6 +128,10 @@ export default makeStyles({
     ['@media (max-width: 767px)']: {
       width: '-webkit-fill-available',
       marginBottom: '2rem'
+    },
+    '&:hover': {
+      backgroundColor: '#610C8D',
+      transition: '1s linear'
     }
   },
   seeMoreImage: {
