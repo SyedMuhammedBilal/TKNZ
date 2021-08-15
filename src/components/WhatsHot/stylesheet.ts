@@ -9,7 +9,8 @@ export default makeStyles({
     backgroundRepeat: 'no-repeat',
     height: 'auto',
     marginTop: '100px',
-    marginBottom: '50px'
+    marginBottom: '50px',
+    overflowY: 'hidden'
   },
   whatsHotTypographyContainer: {
     display: 'flex',
@@ -146,14 +147,18 @@ export default makeStyles({
     border: '1px solid rgba(54, 54, 54, 1)',
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     cursor: 'pointer',
+    transition: 'all 2s ease',
     '@media (max-width: 767px)': {
       // width: '-webkit-fill-available',
       marginBottom: '2rem'
     },
     '&:hover': {
-      backgroundColor: '#610C8D',
-      transition: '1s ease-in-out'
+      backgroundColor: '#161616',
+      transition: '1s ease-in-out',
+      height: '650px'
     }
   },
   seeMoreImage: {
@@ -168,7 +173,6 @@ export default makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: '20px',
     cursor: 'pointer'
   },
   seeMoreTypo: {
