@@ -46,7 +46,6 @@ h1, h2, h3, h4, h5, h6, p, span {
 @media (max-width:500px) {
     .mainBody{
         padding-left: 1.5rem;
-    padding-right: 1.5rem;
+        padding-right: 1.5rem;
     }
-    
 }

@@ -2,14 +2,12 @@ import React, { useEffect } from "react";
 import { Box, Typography } from "@material-ui/core";
 import useStyles from "./stylesheet";
 import Logo from "../../assets/Vector.png";
-import SearchIcon from "../../assets/search.png";
-import AccountIcon from "../../assets/profileIcon.png";
-import NotificationIcon from "../../assets/notificationsIcon.png";
 import BurgerIcon from "../../assets/Burger.png";
 import Hamburger from "./hamburger";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { HamburgerData } from "../../App";
+import { HamburgerData } from "../../layout/Home";
+import { NavbarLeftSideLinks, NavbarRightSideLinks } from "../../static/Navbar";
 
 export default function Navbar() {
   const classes = useStyles();
@@ -40,47 +38,38 @@ export default function Navbar() {
         </div>
       ) : (
         <Box className={classes.navbarContainer}>
-          {/* left items */}
+          {/* left hand link */}
           <Box className={classes.navbarWrapper}>
-            <Box>
+            <Box className={classes.navbarLogoWrapper}>
               <img className={classes.navbarLogo} src={Logo} alt="logo" />
             </Box>
-
-            <Box>
-              <Typography className={classes.navbarTypo}>Packs</Typography>
-            </Box>
-            <Box>
-              <Typography className={classes.navbarTypo}>
-                Marketplace
-              </Typography>
-            </Box>
-            <Box>
-              <Typography className={classes.navbarTypo}>Community</Typography>
-            </Box>
+            {NavbarLeftSideLinks.map((item) => {
+              return (
+                <Box key={item.id}>
+                  <Typography className={classes.navbarTypo}>{item.link}</Typography>
+                </Box>
+              )
+            })}
           </Box>
 
-          {/* right items */}
+          {/* right hand links */}
           <Box className={classes.navbarWrapper}>
-            <Box className={classes.navbarIcons}>
-              <img src={SearchIcon} alt="icon" />
-              <Box>
-                <Typography className={classes.navbarIconsTypo}>
-                  Search
-                </Typography>
-              </Box>
-            </Box>
-            <Box className={classes.navbarIcons}>
-              <img src={AccountIcon} alt="icon" />
-              <Typography className={classes.navbarIconsTypo}>
-                Account
-              </Typography>
-            </Box>
-            <Box className={classes.navbarIcons}>
-              <img src={NotificationIcon} alt="icon" />
-              <Typography className={classes.navbarIconsTypo}>
-                Notifications
-              </Typography>
-            </Box>
+            {NavbarRightSideLinks.map((item) => {
+              return (
+                <Box key={item.id} className={classes.navbarIcons}>
+                  {item.icon && (
+                    <img src={item.icon} alt="icon" />
+                  )}
+                  {item.link && (
+                    <Box>
+                      <Typography className={classes.navbarIconsTypo}>
+                        {item.link}
+                      </Typography>
+                    </Box>
+                  )}
+                </Box>
+              )
+            })}
             <Box className={classes.burgerIcon}>
               <img src={BurgerIcon} alt="burger icon" onClick={HandleClick} />
             </Box>

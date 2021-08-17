@@ -2,10 +2,10 @@ import React, { useMemo, useEffect, useState } from "react";
 import { Box, Typography, Divider } from "@material-ui/core";
 import useStyles from "./stylesheet";
 import Button from "@material-ui/core/Button";
-import { IndexService } from "services/index.service";
-import { LazyImageProvider } from "components/LazyImage/LazyImageContext";
+import { IndexService } from "../../services/index.service";
+import { LazyImageProvider } from "../LazyImage/LazyImageContext";
 import Carousel from "../Carousel/Carousel";
-import LazyImage from "components/LazyImage/LazyImage";
+import LazyImage from "../LazyImage/LazyImage";
 
 const SinglePack = () => {
   const classes = useStyles();

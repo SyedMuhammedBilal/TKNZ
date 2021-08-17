@@ -20,6 +20,12 @@ export default makeStyles({
     // paddingLeft: '10rem',
     // paddingRight: '10rem'
   },
+  navbarLogoWrapper: {
+    cursor: 'pointer',
+    '@media (max-width: 500px)': {
+      width: '35px'
+    }
+  },
   navbarLogo: {
     width: '125px',
     height: '35px'
@@ -86,7 +92,15 @@ export default makeStyles({
     justifyContent: 'space-between',
     marginTop: '25px',
     paddingLeft: '6.5rem',
-    paddingRight: '6.5rem'
+    paddingRight: '6.5rem',
+    '@media (min-width: 435px) and (max-width: 620px)': {
+      paddingRight: '2.5rem',
+      paddingLeft: '2.5rem',
+    },
+    '@media (max-width: 435px)': {
+      paddingRight: '1.5rem',
+      paddingLeft: '1.5rem',
+    }
   },
   hamTypo:{
     fontFamily: 'Accent',
